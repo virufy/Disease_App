@@ -131,6 +131,7 @@ const Step3 = ({
 			map.remove();
 			leafletMapRef.current = null;
 		};
+		// eslint-disable-next-line
 	}, []);
 
 	/* -------------------- Location Switch -------------------- */
