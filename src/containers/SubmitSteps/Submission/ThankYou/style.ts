@@ -1,168 +1,82 @@
 import { colors } from 'theme/index';
-import styled, { css } from 'styled-components';
-
-import { ReactComponent as instaSVG } from 'assets/social/instagram.svg';
-import { ReactComponent as linkedinSVG } from 'assets/social/linkedIn.svg';
-import { ReactComponent as twitterSVG } from 'assets/social/twitter.svg';
-
+import styled from 'styled-components';
 
 export const ThankYouLayout = styled.div`
-  text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px 60px;
   margin: 0 auto;
+  min-height: 70vh;
 
   @media screen and (${props => props.theme.breakpoints.tablet}){
     max-width: 470px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
   }
 `;
 
-export const Title = styled.h2`
-  font-family: "Source Sans Pro";
-  font-size: 24px;
-  line-height: 1.427;
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.realBlack};
-  margin-bottom: 0;
-  margin-top: 40px;
+export const SuccessCircle = styled.div`
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: ${colors.purple};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  box-shadow: 0px 8px 24px rgba(53, 120, 222, 0.35);
+
+  &::after {
+    content: '✓';
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+  }
 `;
 
 export const ThankYouTitle = styled.h1`
   font-family: "Open Sans";
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 142.69%;
-  text-align: left;
-  color: ${props => props.theme.colors.darkBlack};
-  margin-bottom: 18px;
-  margin-top: 34px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.3;
   text-align: center;
+  color: ${colors.darkBlack};
+  margin: 0 0 12px;
+`;
+
+export const BeforeSubmitText = styled.p`
+  font-family: 'Source Sans Pro';
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+  color: ${colors.darkGray};
+  margin: 0 0 8px;
+  max-width: 320px;
 `;
 
 export const SubmissionIdBox = styled.div`
-  margin: 40px 0px;
+  margin-top: 36px;
+  width: 100%;
+  background-color: ${colors.midGray};
+  border: 1.5px solid ${colors.purple_10};
+  border-radius: 14px;
+  padding: 20px 24px;
+  text-align: center;
+
   font-family: 'Source Sans Pro';
   font-size: 14px;
-  line-height: 25px;
-  text-align: center;
-  background-color: ${colors.purple_5};
-  color: ${colors.darkBlack};
-  border-radius: 10px;
-  padding: 16px 0px;
-  border-radius: 10px;
-`;
+  line-height: 1.7;
+  color: ${colors.darkGray};
 
-export const BeforeSubmitText = styled.p<{$centered?: boolean}>`
-  font-family: 'Source Sans Pro';
-  font-size: 14px;
-  line-height: 142.69%;
-  margin-bottom: 2px;
-  color: ${colors.darkBlack};
-
-  ${({ $centered }) => $centered && 'text-align: center;'}
-`;
-
-export const InstaImage = styled(instaSVG)`
-  width: 50%;
-  height: auto;
-  aspect-ratio: 1;
-  display: block;
-`;
-
-export const LinkedInImage = styled(linkedinSVG)`
-  width: 50%;
-  height: auto;
-  aspect-ratio: 1;
-  display: block;
-`;
-
-export const TwitterImage = styled(twitterSVG)`
-  width: 50%;
-  height: auto;
-  aspect-ratio: 1;
-  display: block;
-`;
-
-export const ImageCard = styled.div`
-  display: flex;
-  gap: 16px;
-  padding: 12px;
-  margin-top: 32px;
-  justify-content: center;
-`;
-
-export const IconContainer = styled.a`
-  width: 30%; // Square dimensions for icons
-  height: auto;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  background-color: #FFF;
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
-  text-decoration: none;
-
-`;
-
-
-export const Card = styled.div`
-  border-radius: 10px;
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
-  background: #FFF;
-  width: 100%;
-  padding: 12px 20px 20px;
-  margin-top: 32px;
-`;
-
-export const CardTitle = styled.div`
-  font-family: "Source Sans Pro";
-  font-size: 20px;
-  line-height: 1.427;
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.realBlack};
-`;
-
-export const CardDescription = styled.div`
-  font-family: "Open Sans";
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.colors.darkBlack};
-  margin-top: 8px;
-`;
-
-const baseButton = css`
-  background-color: ${({ theme }) => theme.colors.purple};
-  
-  color: ${({ theme }) => theme.colors.white};
-  font-family: "Source Sans Pro";
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 700;
-  
-  padding: 13px 0;
-
-  margin-top: 20px;
-
-  text-align: center;
-  width: 100%;
-
-  border-radius: 15px;
-`;
-
-export const CardLink = styled.a.attrs(() => ({ target: '_blank', rel: 'noopener noreferrer' }))`
-  ${baseButton}
-  display: block;
-  &:hover {
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.white};
+  strong, b {
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    color: ${colors.purple};
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+    word-break: break-all;
   }
-`;
-
-export const CardButton = styled.button.attrs(() => ({ type: 'button' }))`
-  ${baseButton}
-  border: none;
 `;
