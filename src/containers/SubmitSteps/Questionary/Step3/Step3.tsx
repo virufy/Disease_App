@@ -52,6 +52,18 @@ const LOCATIONS = {
 		lat: 25.2048,
 		lng: 55.2708,
 		zoom: 12
+	},
+	mecca: {
+		label: "Mecca",
+		lat: 21.3891,
+		lng: 39.8579,
+		zoom: 12
+	},
+	medina: {
+		label: "Medina",
+		lat: 24.5247,
+		lng: 39.5692,
+		zoom: 12
 	}
 } as const;
 
@@ -215,6 +227,8 @@ const Step3 = ({
 			>
 				<option value="siliconValley">Silicon Valley</option>
 				<option value="dubai">Dubai</option>
+				<option value="mecca">Mecca</option>
+				<option value="medina">Medina</option>
 			</select>
 
 			<MapContainer ref={mapContainerRef} className="map-container" />

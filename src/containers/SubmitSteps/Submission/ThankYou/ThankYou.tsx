@@ -115,12 +115,6 @@ const ThankYou = (p: Wizard.StepProps) => {
         <CardLink href={'https://virufy.org/en/'}>{t('thankyou:LearnMoreCard.button')}</CardLink>
       </Card>
 
-      <Card>
-        <CardTitle>{t('thankyou:JoinUsCard.title')}</CardTitle>
-        <CardDescription>{t('thankyou:JoinUsCard.description')}</CardDescription>
-        <CardLink href={'https://virufy.org/en/get-involved'}>{t('thankyou:JoinUsCard.button')}</CardLink>
-      </Card>
-
       <Title>{t('thankyou:followUs', 'Follow Us')}</Title>
       <ImageCard>
         <IconContainer  href="https://www.instagram.com/virufy/" target="_blank">
