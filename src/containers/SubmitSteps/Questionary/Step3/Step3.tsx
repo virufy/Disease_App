@@ -137,6 +137,8 @@ const Step3 = ({
 			map.remove();
 			leafletMapRef.current = null;
 		};
+		// Init runs once on mount; the Location Switch effect below reacts to selectedLocation.
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	/* -------------------- Location Switch -------------------- */
