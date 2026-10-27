@@ -24,7 +24,8 @@ interface StructuredData {
 	longitude: number;
 }
 
-const apiUrl = process.env.REACT_APP_API_URL!;
+// const apiUrl = process.env.REACT_APP_API_URL!;
+const apiUrl = 'https://pyobr3vvh7.execute-api.us-east-1.amazonaws.com/prod/diseasemaplambda' ;
 
 // Helper function to convert file to Base64
 const toBase64 = (file: Blob): Promise<string> =>
