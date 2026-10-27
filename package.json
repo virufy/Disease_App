@@ -1,7 +1,7 @@
 {
   "name": "virumap",
   "version": "0.0.5",
-  "homepage": "/disease-app",
+  "homepage": "/dubai-app",
   "private": true,
   "dependencies": {
     "@hookform/error-message": "0.0.4",

@@ -41,12 +41,6 @@ const customIcon = new L.Icon({
 });
 
 const LOCATIONS = {
-	siliconValley: {
-		label: "Silicon Valley",
-		lat: 37.3875,
-		lng: -122.0575,
-		zoom: 12
-	},
 	dubai: {
 		label: "Dubai",
 		lat: 25.2048,
@@ -72,11 +66,11 @@ const Step3 = ({
 
 	// State
 	const [selectedLocation, setSelectedLocation] =
-		useState<LocationKey>("siliconValley");
+		useState<LocationKey>("dubai");
 
 	const [center, setCenter] = useState<{ lat: number; lng: number }>({
-		lat: LOCATIONS.siliconValley.lat,
-		lng: LOCATIONS.siliconValley.lng
+		lat: LOCATIONS.dubai.lat,
+		lng: LOCATIONS.dubai.lng
 	});
 
 	const [activeStep, setActiveStep] = useState(true);
@@ -213,7 +207,6 @@ const Step3 = ({
 					maxWidth: "250px"
 				}}
 			>
-				<option value="siliconValley">Silicon Valley</option>
 				<option value="dubai">Dubai</option>
 			</select>
 

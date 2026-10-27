@@ -39,21 +39,21 @@ const App = () => {
 				<Header />
 				<FullWidth style={{ flex: 1 }}>
 					<Switch>
-						<Route path="/disease-app/welcome">
+						<Route path="/dubai-app/welcome">
 							<AsyncLoad key="Welcome" container="Welcome" />
 						</Route>
-						<Route path="/disease-app/submit-steps">
+						<Route path="/dubai-app/submit-steps">
 							<AsyncLoad key="SubmitSteps" container="SubmitSteps" />
 						</Route>
 						<Redirect
 							exact
 							from="/"
-							to={{ pathname: "/disease-app/welcome", search }}
+							to={{ pathname: "/dubai-app/welcome", search }}
 						/>
 						<Redirect
 							exact
-							from="/disease-app"
-							to={{ pathname: "/disease-app/welcome", search }}
+							from="/dubai-app"
+							to={{ pathname: "/dubai-app/welcome", search }}
 						/>
 						<Route>
 							<div>404 Page</div>

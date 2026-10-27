@@ -178,11 +178,11 @@ const ListenAudio = ({
     setActiveStep(false);
     if (location.state && location.state.from) {
       if (isCoughLogic) {
-        history.push('/disease-app/submit-steps/step-record/cough', { isShortAudioCollection });
+        history.push('/dubai-app/submit-steps/step-record/cough', { isShortAudioCollection });
       } else if (isBreathLogic) {
-        history.push('/disease-app/submit-steps/step-record/breath');
+        history.push('/dubai-app/submit-steps/step-record/breath');
       } else {
-        history.push('/disease-app/submit-steps/step-record/speech');
+        history.push('/dubai-app/submit-steps/step-record/speech');
       }
     } else if (previousStep) {
       history.push(previousStep);

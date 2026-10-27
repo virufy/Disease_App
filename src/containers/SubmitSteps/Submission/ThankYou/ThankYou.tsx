@@ -89,7 +89,7 @@ const ThankYou = (p: Wizard.StepProps) => {
       <Card>
         <CardTitle>{t('thankyou:DashboardCard.title')}</CardTitle>
         <CardDescription>{t('thankyou:DashboardCard.description')}</CardDescription>
-        <CardLink href={'/disease-map'}>{t('thankyou:DashboardCard.button')}</CardLink>
+        <CardLink href={'/dubai-map'}>{t('thankyou:DashboardCard.button')}</CardLink>
       </Card>
 
       <Card>
