@@ -41,16 +41,10 @@ const customIcon = new L.Icon({
 });
 
 const LOCATIONS = {
-	siliconValley: {
-		label: "Silicon Valley",
-		lat: 37.3875,
-		lng: -122.0575,
-		zoom: 12
-	},
-	dubai: {
-		label: "Dubai",
-		lat: 25.2048,
-		lng: 55.2708,
+	medina: {
+		label: "Medina",
+		lat: 24.5247,
+		lng: 39.5692,
 		zoom: 12
 	},
 	mecca: {
@@ -59,10 +53,10 @@ const LOCATIONS = {
 		lng: 39.8579,
 		zoom: 12
 	},
-	medina: {
-		label: "Medina",
-		lat: 24.5247,
-		lng: 39.5692,
+	jeddah: {
+		label: "Jeddah",
+		lat: 21.4858,
+		lng: 39.1925,
 		zoom: 12
 	}
 } as const;
@@ -84,11 +78,11 @@ const Step3 = ({
 
 	// State
 	const [selectedLocation, setSelectedLocation] =
-		useState<LocationKey>("siliconValley");
+		useState<LocationKey>("medina");
 
 	const [center, setCenter] = useState<{ lat: number; lng: number }>({
-		lat: LOCATIONS.siliconValley.lat,
-		lng: LOCATIONS.siliconValley.lng
+		lat: LOCATIONS.medina.lat,
+		lng: LOCATIONS.medina.lng
 	});
 
 	const [activeStep, setActiveStep] = useState(true);
@@ -225,10 +219,9 @@ const Step3 = ({
 					maxWidth: "250px"
 				}}
 			>
-				<option value="siliconValley">Silicon Valley</option>
-				<option value="dubai">Dubai</option>
-				<option value="mecca">Mecca</option>
 				<option value="medina">Medina</option>
+				<option value="mecca">Mecca</option>
+				<option value="jeddah">Jeddah</option>
 			</select>
 
 			<MapContainer ref={mapContainerRef} className="map-container" />
